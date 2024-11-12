@@ -1,25 +1,26 @@
-CC	=	cc
+NAME = libftprintf.a
 
-CFLAGS	=	-Wall -Wextra -Werror
+CC = cc
 
-NAME	=	libftprintf.a
+CFLAGS = -Wall -Wextra -Werror
 
-SRCS	=	ft_printf.c ft_integers.c ft_puthexa.c ft_putptr.c ft_putstr.c ft_unsignednbr.c
+SRCS = ft_printf.c ft_integers.c ft_puthexa.c ft_putptr.c \
+		ft_putstr.c ft_unsignednbr.c
 
-OBJECTS	=	$(SRCS:.c=.o)
+OBJECTS	= $(SRCS:.c=.o)
 
-all:		$(NAME)
+all: $(NAME)
 
-$(NAME):	$(OBJECTS)
+$(NAME): $(OBJECTS)
 			ar rcs $(NAME) $(OBJECTS)
-%.o:	%.c
-	$(CC) $(CFLAGS) -c $< -o $@
+%.o: %.c
+		$(CC) $(CFLAGS) -c $< -o $@
 clean:
-	rm -f $(OBJECTS)
+		rm -f $(OBJECTS)
 
-fclean: clean
-	rm -f $(NAME)
+fclean:	clean
+		rm -f $(NAME)
 
-re:		fclean all
+re:	fclean all
 
 .PHONY: clean fclean re all

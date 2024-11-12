@@ -6,7 +6,7 @@
 /*   By: cfiachet <cfiachet@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:14:32 by cfiachet          #+#    #+#             */
-/*   Updated: 2024/11/04 22:10:56 by cfiachet         ###   ########.fr       */
+/*   Updated: 2024/11/11 20:20:38 by cfiachet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	ft_lowhexa(unsigned int c)
 	else
 	{
 		write(1, &"0123456789abcdef"[c], 1);
-		len++;	
+		len++;
 	}
 	return (len);
 }
